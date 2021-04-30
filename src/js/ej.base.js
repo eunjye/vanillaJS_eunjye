@@ -1,5 +1,7 @@
 'use strict';
 
+const { default: axios } = require("axios");
+
 // import "@babel/polyfill"; // Promise, Object.assign, Array.from ...
 // import { pi, power, Foo } from './lib';
 
@@ -20,4 +22,21 @@
 
 // console.log('sss')
 
-console.log('!!!');
+
+const aaa = () => {
+  console.log('!!!');
+  let div = document.createElement("div")
+  let p = document.createElement("p")
+  div.append(p);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  aaa();
+
+  axios.get('http://localhost:3000/').then((res) => {
+    console.log(`${res} !!!`);
+  }).catch((err) => {
+    console.log(err);
+  })
+})

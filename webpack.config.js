@@ -3,12 +3,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   // entry file
-  entry: ['@babel/polyfill', './src/js/main.js', './src/sass/main.scss'],
+  entry: ['@babel/polyfill', './src/js/ej.base.js', './src/sass/main.scss'],
   // 컴파일 + 번들링된 js 파일이 저장될 경로와 이름 지정
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.js'
   },
+  target: ['web', 'es5'],
   plugins: [
     new MiniCssExtractPlugin({ filename: 'css/style.css' })
   ],
