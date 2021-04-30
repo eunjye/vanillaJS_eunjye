@@ -3,7 +3,7 @@ module.exports = (app, fs) => {
     res.render('index', {
       title: `eunjye's playgound`,
       length: 5
-    })
+    }) 
   });
   app.get('/about',(req,res) => {
     res.render('about.html');
